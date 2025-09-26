@@ -1,0 +1,47 @@
+
+/*
+    navbar design
+*/
+
+/* adjusts everything in the nav */
+.nav {
+    border-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 15px;
+    background-color: #2A2A2A;
+}
+
+/* everything on the right side of the nav bar */
+.nav-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-right: 150px;
+    margin-top: 20px;
+}
+    
+/* list items in the nav bar */
+.nav-right li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    color: #9370DB;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* hover effect for the links in the nav bar */
+.nav-right li a:hover {
+    color: #DDDDDD;
+}
+
+/* everything on the left side of the nav bar */
+.nav-left {
+    padding-top: 20px;
+}

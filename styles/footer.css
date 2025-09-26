@@ -1,0 +1,19 @@
+/*
+    footer design
+*/
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2A2A2A;
+    color: #DDDDDD;
+}
+
+footer p {
+    font-size: 15px !important;
+}
+
+footer a {
+    color: #9370DB;
+    text-decoration: none;
+}
