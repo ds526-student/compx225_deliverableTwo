@@ -1,15 +1,16 @@
 <?php
+    // load .env file
+    $env = parse_ini_file(__DIR__ . '/../.env');
 
-    // Database configuration for XAMPP
-    $host = 'localhost';        // host e.g. 'localhost'
-    $dbname = 'kiwi_kloset';    // name of the database
-    $username = 'root';         // username e.g. 'root'
-    $password = '';             // password e.g. ''
+    // database config
+    $host = $env['DB_HOST'];
+    $dbname = $env['DB_NAME'];
+    $username = $env['DB_USER'];
+    $password = $env['DB_PASS'];
 
-    // Create MySQLi connection
+    // create db connection
     $con = mysqli_connect($host, $username, $password, $dbname);
 
-    // Check connection
     if (!$con) {
         die("Connection failed: " . mysqli_connect_error());
     }
