@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="../../styles/footer.css">
     </head>
     <body class="content">
-        <?php require '../sections/navbar.html'; ?>
+        <?php require '../partials/navbar.html'; ?>
         <h1>Add Page</h1>
-        <?php require '../sections/footer.html'; ?>
+        <?php require '../partials/footer.html'; ?>
     </body>
 </html>
