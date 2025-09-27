@@ -1,7 +1,7 @@
 <?php
 
 // Test MySQL database connection
-require_once 'database/db.php';
+require_once '../config/db.php';
 
 echo "Database Connection Test\n";
 echo "✅ Connection successful!\n";

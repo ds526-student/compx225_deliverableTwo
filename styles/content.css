@@ -1,0 +1,30 @@
+/* 
+    general content design
+*/
+
+/* for anything to be displayed in line horizontally */
+.inline-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    color: #dedede;
+}
+
+/* padding for inline content */
+.inline-padding {
+    /* padding: 30px 350px 30px 350px; */
+    text-align: center;
+}
+
+/* centered heading style content */
+.centre-content {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+/* left aligned text adjustment */
+.inline-left-text {
+    background-color: #60b7b9;
+}
