@@ -76,5 +76,45 @@
 
         <!-- Footer -->
         <?php require '../partials/footer.html'; ?>
+        <dialog id="add_costume">
+            <h1>Add New Costume</h1>
+            <form method="POST" action="add.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter costume name" required>
+
+                <label for="size">Size:</label>
+                <input type="text" id="size" name="size" placeholder="Enter costume size" required>
+
+                <label for="is_available">Available</label>
+                <input type="number" id="is_available" name="is_available" min="0" max="1" placeholder="1 or 0" required>
+
+                <label for="daily_rate">Daily Rate:</label>
+                <input type="number" step="0.01" id="daily_rate" name="daily_rate" placeholder="Daily rate in $" required>
+
+                <label for="category">Category:</label>
+                <select name="category" id="category" required>
+                    <option value="Movies">Movies</option>
+                    <option value="Halloween">Halloween</option>
+                    <option value="Circus">Circus</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Novelty">Novelty</option>
+                </select>
+
+                <label for="branch">Branch:</label>
+                <select name="branch" id="branch" required>
+                    <option value="Auckland">Auckland</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Christchurch">Christchurch</option>
+                    <option value="Hamilton">Hamilton</option>
+                    <option value="Tauranga">Tauranga</option>
+                </select>
+
+                <div class="dialog-buttons">
+                    <button type="submit">Add Costume</button>
+                    <button type="button" onclick="add_costume.close()">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+        <script src="../../components/js/index.js"></script>
     </body>
 </html>
