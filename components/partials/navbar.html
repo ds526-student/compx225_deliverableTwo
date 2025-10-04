@@ -3,7 +3,7 @@
 <header class="nav">
     <div class="nav-left">
         <!-- Club logo that links to home page -->
-        <a href="index.html">
+        <a href="index.php">
             <img 
                 src="../../images/kiwi_kloset_logo.png" 
                 alt="Kiwi Kloset Logo" 
@@ -15,7 +15,12 @@
     <!-- Navigation menu items -->
     <ul class="nav-right">
         <li><a href="index.php">Home</a></li>
-        <li><a href="rentals.php">Rentals</a></li>
+        <li id="search-id">
+            <form action="rentals.php" method="GET" id="search-form">
+                <input type="number" placeholder="Enter Costume ID" name="id" min="1" required>
+                <button type="submit">Search</button>
+            </form>
+        </li>
         <li><a href="add.php">Add Item</a></li>
     </ul>
 </header>

@@ -30,9 +30,53 @@ p {
     padding-bottom: 50px;
 }
 
-.costume-item {
+#rentals {
+    width: 75%;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: min-content;
+    padding-bottom: 50px;
+}
+
+.table-item {
     border-color: #60b7b9;
     border-style: solid;
     border-width: 2px;
     padding: 10px;
+}
+
+/* 
+    general content design
+*/
+
+/* for anything to be displayed in line horizontally */
+.inline-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    color: #dedede;
+}
+
+/* padding for inline content */
+.inline-padding {
+    /* padding: 30px 350px 30px 350px; */
+    text-align: center;
+}
+
+/* centered heading style content */
+.centre-content {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+/* left aligned text adjustment */
+.inline-left-text {
+    background-color: #60b7b9;
 }

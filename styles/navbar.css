@@ -36,6 +36,39 @@
     font-size: 20px;
 }
 
+.nav-right input[type="number"] {
+    display: block;
+    margin-top: 2%;
+    color: #60b7b9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    width: 70%;
+}
+
+.nav-right button {
+    background-color: #60b7b9;
+    border: none;
+    color: white;
+    margin-top: 2%;
+    text-align: center;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#search-id {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* hover effect for the links in the nav bar */
 .nav-right li a:hover {
     color: #DDDDDD;

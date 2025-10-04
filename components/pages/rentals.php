@@ -1,4 +1,3 @@
-<?php require_once '../../config/db.php'; ?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -12,7 +11,43 @@
     </head>
     <body class="content">
         <?php require '../partials/navbar.html'; ?>
-        <h1>Rentals Page</h1>
+        <!-- Main Content -->
+        <!-- Welcome Message -->
+        <h1 class="centre-content">
+            Rentals
+        </h1>
+        <div id="rentals">
+            <h1>Costume Name</h1>
+            <h1>Customer ID</h1>
+            <h1>Customer Name</h1>
+            <h1>Start DateTime</h1>
+            <h1>End DateTime</h1>
+            <?php
+                require_once '../../config/db.php';
+                require_once '../../queries/select_queries.php';
+
+                try {
+                    $id = $_GET['id'];
+
+                    $result = rentalsByCostumeId($id);
+
+                    if ($result) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="table-item">' . $row['costume_name'] . '</div>';
+                            echo '<div class="table-item">' . $row['customer_id'] . '</div>';
+                            echo '<div class="table-item">' . $row['customer_name'] . '</div>';
+                            echo '<div class="table-item">' . $row['start_datetime'] . '</div>';
+                            echo '<div class="table-item">' . $row['end_datetime'] . '</div>';
+                        }
+                    }
+                    else {
+                        echo "<p>Error: " . mysqli_error($con) . "</p>";
+                    }
+                } catch (Exception $e) {
+                    die ("Error fetching costumes: " . $e->getMessage());
+                }
+            ?>
+        </div>
         <?php require '../partials/footer.html'; ?>
     </body>
 </html>

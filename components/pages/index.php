@@ -6,7 +6,6 @@
         <title>Kiwi Kloset</title>
         <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
         <link rel="stylesheet" href="../../styles/styles.css">
-        <link rel="stylesheet" href="../../styles/content.css">
         <link rel="stylesheet" href="../../styles/navbar.css">
         <link rel="stylesheet" href="../../styles/footer.css">
     </head>
@@ -53,17 +52,17 @@
 
                     if ($result) {
                         while ($row = $result->fetch_assoc()) {
-                            echo '<div class="costume-item">' . $row['id'] . '</div>';
-                            echo '<div class="costume-item">' . $row['name'] . '</div>';
-                            echo '<div class="costume-item">' . $row['size'] . '</div>';
+                            echo '<div class="table-item">' . $row['id'] . '</div>';
+                            echo '<div class="table-item">' . $row['name'] . '</div>';
+                            echo '<div class="table-item">' . $row['size'] . '</div>';
                             if ($row['is_available'] == '1') {
-                                echo '<div class="costume-item">Yes</div>';
+                                echo '<div class="table-item">Yes</div>';
                             }
                             else {
-                                echo '<div class="costume-item">No</div>';
+                                echo '<div class="table-item">No</div>';
                             }
-                            echo '<div class="costume-item">$' . $row['daily_rate'] . '/day</div>';
-                            echo '<div class="costume-item">' . $row['category'] . '</div>';
+                            echo '<div class="table-item">$' . $row['daily_rate'] . '/day</div>';
+                            echo '<div class="table-item">' . $row['category'] . '</div>';
                         }
                     }
                     else {
