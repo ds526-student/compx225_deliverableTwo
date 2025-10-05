@@ -36,7 +36,8 @@
         // prepare, bind, and execute the statement
         $stmt = mysqli_prepare($con, $query);
         mysqli_stmt_bind_param($stmt, 'i', $id);
-        $result = mysqli_stmt_execute($stmt);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
 
         if (!$result) {
             die("Query failed: " . mysqli_error($con));
