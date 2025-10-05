@@ -82,14 +82,22 @@
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter costume name" required>
 
+                <br>
+
                 <label for="size">Size:</label>
                 <input type="text" id="size" name="size" placeholder="Enter costume size" required>
+
+                <br>
 
                 <label for="is_available">Available</label>
                 <input type="number" id="is_available" name="is_available" min="0" max="1" placeholder="1 or 0" required>
 
+                <br>
+
                 <label for="daily_rate">Daily Rate:</label>
                 <input type="number" step="0.01" id="daily_rate" name="daily_rate" placeholder="Daily rate in $" required>
+
+                <br>
 
                 <label for="category">Category:</label>
                 <select name="category" id="category" required>
@@ -100,13 +108,15 @@
                     <option value="Novelty">Novelty</option>
                 </select>
 
+                <br>
+
                 <label for="branch">Branch:</label>
                 <select name="branch" id="branch" required>
-                    <option value="Auckland">Auckland</option>
-                    <option value="Wellington">Wellington</option>
-                    <option value="Christchurch">Christchurch</option>
-                    <option value="Hamilton">Hamilton</option>
-                    <option value="Tauranga">Tauranga</option>
+                    <option value="1">Auckland</option>
+                    <option value="2">Wellington</option>
+                    <option value="3">Christchurch</option>
+                    <option value="4">Hamilton</option>
+                    <option value="5">Tauranga</option>
                 </select>
 
                 <div class="dialog-buttons">

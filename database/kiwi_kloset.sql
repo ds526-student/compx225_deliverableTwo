@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS costumes;
 DROP TABLE IF EXISTS rentals;
 
 CREATE TABLE customers (
-	id INT PRIMARY KEY,
+	id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255),
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
@@ -15,14 +15,14 @@ CREATE TABLE customers (
 );
 
 CREATE TABLE branches (
-	id INT PRIMARY KEY,
+	id INT PRIMARY KEY AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE costumes (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
 	is_available TINYINT(1) NOT NULL,
 	branch_id INT NOT NULL,
 	name VARCHAR(255) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE costumes (
 );
 
 CREATE TABLE rentals (
-	id INT PRIMARY KEY,
+	id INT PRIMARY KEY AUTO_INCREMENT,
 	start_datetime DATETIME NOT NULL,
 	end_datetime DATETIME NOT NULL,
 	costume_id INT NOT NULL,
