@@ -10,11 +10,16 @@
         <link rel="stylesheet" href="../../styles/footer.css">
     </head>
     <body class="content">
+        <!-- Navbar -->
         <?php require '../partials/navbar.html'; ?>
+        
+        <!-- Main Content -->
+        <!-- Welcome Message -->
         <h1 class="centre-content">
             Added New Item
         </h1>
 
+        <!-- Display the newly added item -->
         <div id="costumes">
             <h1>ID</h1>
             <h1>Name</h1>
@@ -27,7 +32,7 @@
                 require_once '../../queries/insert_queries.php';
                 require_once '../../queries/select_queries.php';
 
-                
+                // process submission and display the newly added item in a table
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $name = $_POST['name'];
                     $size = $_POST['size'];
@@ -54,6 +59,7 @@
             ?>
         </div>
 
+        <!-- Footer -->
         <?php require '../partials/footer.html'; ?>
     </body>
 </html>

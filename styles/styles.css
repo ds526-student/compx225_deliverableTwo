@@ -17,6 +17,7 @@ p {
     color: #dedede;
 }
 
+/* grid layout for costumes and rentals */
 #costumes {
     width: 75%;
     grid-column: 1 / span 2;
@@ -43,6 +44,7 @@ p {
     padding-bottom: 50px;
 }
 
+/* individual item design */
 .table-item {
     border-color: #60b7b9;
     border-style: solid;

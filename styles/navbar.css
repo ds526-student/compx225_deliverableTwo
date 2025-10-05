@@ -37,6 +37,7 @@
     font-size: 20px;
 }
 
+/* input box and button in the nav bar */
 .nav-right input[type="number"] {
     display: block;
     margin-top: 2%;
@@ -58,6 +59,7 @@
     cursor: pointer;
 }
 
+/* search form and input box container */
 #search-id {
     display: flex;
     align-items: center;

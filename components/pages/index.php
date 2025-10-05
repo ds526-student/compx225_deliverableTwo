@@ -47,6 +47,7 @@
                 require_once '../../config/db.php';
                 require_once '../../queries/select_queries.php';
 
+                // fetch and display all costumes in a table
                 try {
                 $result = getAllCostumes();
 
@@ -76,6 +77,8 @@
 
         <!-- Footer -->
         <?php require '../partials/footer.html'; ?>
+
+        <!-- Add Costume Dialog -->
         <dialog id="add_costume">
             <h1>Add New Costume</h1>
             <form method="POST" action="add.php">

@@ -10,12 +10,16 @@
         <link rel="stylesheet" href="../../styles/footer.css">
     </head>
     <body class="content">
+        <!-- Navbar -->
         <?php require '../partials/navbar.html'; ?>
+
         <!-- Main Content -->
         <!-- Welcome Message -->
         <h1 class="centre-content">
             Rentals
         </h1>
+
+        <!-- Display Rentals from Database -->
         <div id="rentals">
             <h1>Costume Name</h1>
             <h1>Customer ID</h1>
@@ -26,6 +30,7 @@
                 require_once '../../config/db.php';
                 require_once '../../queries/select_queries.php';
 
+                // fetch and display all rentals in a table
                 try {
                     $id = $_GET['id'];
 
@@ -48,6 +53,8 @@
                 }
             ?>
         </div>
+
+        <!-- Footer -->
         <?php require '../partials/footer.html'; ?>
     </body>
 </html>
