@@ -49,7 +49,7 @@
                         echo "<p>Error: " . mysqli_error($con) . "</p>";
                     }
                 } catch (Exception $e) {
-                    die ("Error fetching costumes: " . $e->getMessage());
+                    die ("Error fetching costumes: " . $e->getMessage(). " Please contact your system administrator.");
                 }
             ?>
         </div>

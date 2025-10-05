@@ -44,12 +44,12 @@
             <h1>Daily Rate</h1>
             <h1>Category</h1>
             <?php
-                require_once '../../config/db.php';
-                require_once '../../queries/select_queries.php';
-
-                // fetch and display all costumes in a table
                 try {
-                $result = getAllCostumes();
+                    require_once '../../config/db.php';
+                    require_once '../../queries/select_queries.php';
+
+                    // fetch and display all costumes in a table
+                    $result = getAllCostumes();
 
                     if ($result) {
                         while ($row = $result->fetch_assoc()) {
@@ -70,7 +70,7 @@
                         echo "<p>Error: " . mysqli_error($con) . "</p>";
                     }
                 } catch (Exception $e) {
-                    die ("Error fetching costumes: " . $e->getMessage());
+                    die ("Error fetching costumes: " . $e->getMessage() . " Please contact your system administrator.");
                 }
             ?>
         </div>
